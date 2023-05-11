@@ -21,9 +21,12 @@
     <input type="text" class="form-control" id="name" name="name"  placeholder="Enter email" value="{{$product->name}}">
     </div>
     <div class="form-group">
-    <label for="exampleFormControlFile1">image</label>
-    <input type="file" class="form-control" id="image" name="image">
-    <img src="/images/{{$product->image}}" height="100"/>
+        <label for="exampleFormControlFile1">image show</label>
+        @foreach($images as $image)
+        <img src="{{ asset('images/' . $image) }}" height="100"/>
+        @endforeach
+
+
   </div>
   <div class="form-group">
     <label for="price">price</label>

@@ -1,5 +1,5 @@
 @extends('layout2')
-  
-@section('content')
 
+@section('content')
+dsf
 @endsection
