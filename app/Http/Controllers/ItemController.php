@@ -58,8 +58,9 @@ class ItemController extends Controller
         $columnName = $request->input('columns')[$columnIndex]['data']; // Column name
         $columnSortOrder = $request->input('order')[0]['dir']; // asc or desc value
 
-        $main_query = item::from('items as cat')
         
+        $main_query = item::from('items as cat')
+
         ->select('cat.id','cat.fname','cat.lname','cat.detail','cat.price','cat.created_at','cat.updated_at','cat.product_id')->with('product_data')->orderBy($columnName,
          $columnSortOrder);
 
